@@ -1,47 +1,15 @@
-.container {
-	min-height: 100vh;
-	padding: 0 0.5rem;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
-.main {
-	padding: 5rem 0;
-	flex: 1;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
 .hero {
-	height: 200px;
-	margin-top: 15px;
+	width: 0;
+	max-width: 100%;
+	min-width: 100%;
+	margin: 100px 0;
+	overflow: hidden;
 	border-radius: 8px;
 	box-shadow: 0 13px 27px -5px hsla(240, 30.1%, 28%, 0.25), 0 8px 16px -8px hsla(0, 0%, 0%, 0.3),
 		0 -6px 16px -6px hsla(0, 0%, 0%, 0.03);
-	overflow: hidden;
-}
-
-.footer {
-	width: 100%;
-	height: 100px;
-	border-top: 1px solid #eaeaea;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.footer img {
-	margin-left: 0.5rem;
-}
-
-.footer a {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	.heroImage {
+		height: 200px;
+	}
 }
 
 .title a {
@@ -117,10 +85,6 @@
 	margin: 0;
 	font-size: 1.25rem;
 	line-height: 1.5;
-}
-
-.logo {
-	height: 1em;
 }
 
 @media (max-width: 600px) {
