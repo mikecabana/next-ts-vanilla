@@ -1,4 +1,7 @@
 import type { AppProps, NextWebVitalsMetric  /*, AppContext */ } from 'next/app'
+
+import { Provider } from 'next-auth/client'
+
 import '../styles/globals.scss'
 
 export function reportWebVitals(metric: NextWebVitalsMetric) {
@@ -8,7 +11,11 @@ export function reportWebVitals(metric: NextWebVitalsMetric) {
 }
 
 function MyApp({ Component, pageProps }: AppProps) {
-    return <Component {...pageProps} />
+    return (
+        <Provider session={pageProps.session}>
+            <Component {...pageProps} />
+        </Provider>
+    );
 }
 
 export default MyApp
