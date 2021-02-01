@@ -22,8 +22,7 @@ const options: InitOptions = {
 			name: 'IEG',
 			scope: 'openid profile sample-api-key offline_access',
 			domain: 'authority-dev.ieg-america.com',
-			clientId: 'next-dashboard',
-			clientSecret: 'Fq5WF9p4zSkGGniVNbb-UcDGiXAX9h2c',
+			clientId: 'ng-code',
 			protection: 'pkce',
 		}),
 		// Providers.Google({
