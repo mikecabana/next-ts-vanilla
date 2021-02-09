@@ -34,11 +34,12 @@ export function Nav({ }: NavProps) {
 
             <div>
                 {!session && <>
-                    Not signed in <br />
+                    <span>Not signed in</span>
                     <a href={`/api/auth/signin`} onClick={(e) => { e.preventDefault(); signIn(); }}>Sign in</a>
                 </>}
                 {session && <>
-                    Signed in as {session.user.email} <br />
+
+                    <span>Signed in as {session.user.name}</span>
                     <a href={`/api/auth/signout`} onClick={(e) => { e.preventDefault(); signOut(); }}>Sign out</a>
                 </>}
             </div>

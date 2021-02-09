@@ -12,7 +12,21 @@
 	border-bottom: 1px solid #eaeaea;
 	padding: 15px 25px;
 
-	a {
+	> div {
+		display: flex;
+		align-items: center;
+	}
+
+	div:first-child {
+		flex-grow: 1;
+	}
+
+	div:last-child {
+		justify-content: flex-end;
+	}
+
+	a,
+	span {
 		margin-right: 15px;
 	}
 

@@ -6,26 +6,25 @@ import Providers from 'next-auth/providers';
 const options: InitOptions = {
 	// Configure one or more authentication providers
 	providers: [
-		Providers.Email({
-			server: {
-				host: process.env.EMAIL_SERVER_HOST,
-				port: parseInt(process.env.EMAIL_SERVER_PORT),
-				auth: {
-					user: process.env.EMAIL_SERVER_USER,
-					pass: process.env.EMAIL_SERVER_PASSWORD,
-				},
-			},
-			from: process.env.EMAIL_FROM,
-		}),
-		// Providers.IdentityServer4({
-		// 	id: 'demo-identity-server',
-		// 	name: 'Demo IdentityServer4',
-		// 	scope: 'openid profile email api offline_access',
-		// 	domain: 'demo.identityserver.io',
-		// 	clientId: 'interactive.confidential.short',
-		//     clientSecret: 'secret',
-
+		// Providers.Email({
+		// 	server: {
+		// 		host: process.env.EMAIL_SERVER_HOST,
+		// 		port: parseInt(process.env.EMAIL_SERVER_PORT),
+		// 		auth: {
+		// 			user: process.env.EMAIL_SERVER_USER,
+		// 			pass: process.env.EMAIL_SERVER_PASSWORD,
+		// 		},
+		// 	},
+		// 	from: process.env.EMAIL_FROM,
 		// }),
+		Providers.IdentityServer4({
+			id: 'next-dashboard',
+			name: 'IEG',
+			scope: 'openid profile sample-api-key offline_access',
+			domain: 'authority-dev.ieg-america.com',
+			clientId: 'ng-code',
+			protection: 'pkce',
+		}),
 		// Providers.Google({
 		// 	clientId: process.env.GOOGLE_ID,
 		// 	clientSecret: process.env.GOOGLE_SECRET,
