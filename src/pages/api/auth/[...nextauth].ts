@@ -18,11 +18,11 @@ const options: InitOptions = {
 		// 	from: process.env.EMAIL_FROM,
 		// }),
 		Providers.IdentityServer4({
-			id: 'next-dashboard',
-			name: 'IEG',
-			scope: 'openid profile sample-api-key offline_access',
-			domain: 'authority-dev.ieg-america.com',
-			clientId: 'ng-code',
+			id: 'demo-identityserver-io',
+			name: 'demo.identityserver.io',
+			scope: 'openid profile email api offline_access',
+			domain: 'demo.identityserver.io',
+			clientId: 'interactive.public',
 			protection: 'pkce',
 		}),
 		// Providers.Google({
@@ -37,15 +37,15 @@ const options: InitOptions = {
 	// },
 
 	// A database is optional, but required to persist accounts in a database
-	database: {
-		type: 'postgres',
-		host: process.env.DB_HOST,
-		port: parseInt(process.env.DB_PORT),
-		username: process.env.DB_USER,
-		password: process.env.DB_PASS,
-		database: process.env.DB,
-		synchronize: true,
-	},
+	// database: {
+	// 	type: 'postgres',
+	// 	host: process.env.DB_HOST,
+	// 	port: parseInt(process.env.DB_PORT),
+	// 	username: process.env.DB_USER,
+	// 	password: process.env.DB_PASS,
+	// 	database: process.env.DB,
+	// 	synchronize: true,
+	// },
 
 	// debug: true,
 };
