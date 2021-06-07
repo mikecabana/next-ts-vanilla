@@ -9,7 +9,12 @@
 			"request": "launch",
 			"name": "Next: Chrome",
 			"url": "http://localhost:3000",
-			"webRoot": "${workspaceFolder}"
+			"webRoot": "${workspaceFolder}",
+			"presentation": {
+				"hidden": true,
+				"group": "",
+				"order": 2
+			}
 		},
 		{
 			"type": "node",
@@ -18,14 +23,24 @@
 			"runtimeExecutable": "npm",
 			"runtimeArgs": ["run-script", "dev"],
 			"port": 9229,
-			"console": "integratedTerminal"
+			"console": "integratedTerminal",
+			"presentation": {
+				"hidden": true,
+				"group": "",
+				"order": 2
+			}
 		}
 	],
 	"compounds": [
 		{
-			"name": "Next: Full",
+			"name": "Next: Start",
 			"configurations": ["Next: Node", "Next: Chrome"],
-			"stopAll": true
+			"stopAll": true,
+			"presentation": {
+				"hidden": false,
+				"group": "",
+				"order": 1
+			}
 		}
 	]
 }
